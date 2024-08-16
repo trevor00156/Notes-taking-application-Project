@@ -1,0 +1,157 @@
+ 
+
+
+body{ 
+    background: url(duplo24.jpg);
+    background-size: cover;   
+      
+    background-repeat: no-repeat;
+   
+ 
+    
+}
+
+ #eccc68 
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color:  #eccc68 ; 
+  
+ 
+    display: flex;
+    flex-wrap: wrap;
+    direction: flex-start ;
+}
+
+.note{
+    width: 300;
+    height: 400;
+    color: aliceblue ;
+    margin: 15;
+    margin-top: 55px;
+    padding-bottom: 55px;
+   
+}
+.tool{
+    width:auto;
+    padding: 10px;
+    background-color:#2f3542;
+    justify-content: end;
+}
+.tool i{
+    padding: 5px;
+    
+}
+.note textarea{
+border: none;
+width: 100%;
+height: 100%;
+resize: none;
+padding: 10px;
+font-size: 20px;
+font-weight: 400;
+font-family: cursive;
+
+}
+.note textarea:focus{
+    border: 0;
+    outline: 0;
+}
+#addbtn{
+    height: 50px;
+    width: 100px ;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #2f3542;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    
+    outline: 0;
+    
+}
+.trash{
+    cursor: pointer;
+    right: auto;
+    
+}
+.save{
+    cursor: pointer;
+}
+a{
+    right: 65px;
+    position: fixed;
+    
+}
+
+.link{
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    font-size: large;
+    color: red;
+}
+
+.heading{
+    font-family: cursive;
+    font-weight: 700;
+
+}
+
+    
+ 
+
+/* nav{ 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    
+   
+    display: flex;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right:  15px;
+    padding: 20px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    padding-right: 20px;
+}
+
+.login-btn{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    padding-left: 45px;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg,#df4881,#c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+}
+
+ */
+ 

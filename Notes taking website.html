@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Notes Taking application project</title>
+        <link rel="stylesheet" href="style50.css">
+    </head>
+    <body>
+      
+         
+        
+       
+        <!-- <nav> 
+       <img src="logo2.png" class="logo"> 
+       <ul>
+        <li><a href="#" >Features</a></li>
+        <li><a href="#" >How it works</a></li>
+        <li><a href="#" >privacy</a></li> 
+    
+    </ul>
+    <div><a href="#" class="login-btn">Log in</a></div>
+    <div><a href="#" class="btn">Download</a></div>
+
+        
+    </nav>-->
+
+       
+       
+       
+       
+       
+       <script src="https://kit.fontawesome.com/c8c875e0f7.js" crossorigin="anonymous"></script>
+        
+       <center> <h1 class="heading">NOTEHUB</h1></center>
+      <center> <h2 class="heading">Welcome to NoteHub: Your Gateway to Organized Brilliance!</h2></center>
+        
+        <button id="addbtn">
+            <i class="fa-solid fa-plus"></i>
+            Add Note
+        </button>
+
+        
+         
+        <div id="main">
+               
+        </div>
+
+        <a class="link" href="#"><b>Contact us by clicking this link for feadback!!</b> </a>
+      
+         
+
+           
+    </body>         
+           
+
+
+<!-- This is internal js code  -->
+
+
+            <script>
+                const addBtn = document.querySelector("#addBtn")
+const main = document.querySelector("#main")
+addBtn.addEventListener(
+    "click",
+    function() {
+        addNote()
+    }
+)
+const saveNotes = () => {
+    const notes = document.querySelectorAll(".note textarea");
+    console.log(notes);
+    const data = [];
+    notes.forEach(
+            (note) => {
+                data.push(note.value)
+            }
+        )
+        // console.log(data)
+    if (data.length === 0) {
+        localStorage.removeItem("notes")
+    } else {
+        localStorage.setItem("notes", JSON.stringify(data))
+    }
+}
+
+
+//  <div class="note">
+// <div class="tool">
+//     <i class="fas fa-save"></i>
+//     <i class="fas fa-trash"></i>
+// </div>
+// <textarea></textarea>
+// </div>
+
+const addNote = (text = "") => {
+    const note = document.createElement("div");
+    note.classList.add("note")
+    note.innerHTML = `
+    <div class="tool">
+         <i class="save fas fa-save"></i>
+         <i class="trash fas fa-trash"></i> 
+    </div>
+    <textarea>${text}</textarea>
+    `;
+
+    note.querySelector(".trash").addEventListener(
+        "click",
+        function() {
+            note.remove()
+            saveNotes()
+        }
+    )
+    note.querySelector(".save").addEventListener(
+        "click",
+        function() {
+            saveNotes()
+        }
+    )
+    note.querySelector("textarea").addEventListener(
+        "focusout",
+        function() {
+            saveNotes()
+        }
+    )
+    main.appendChild(note);
+    saveNotes()
+}
+
+
+(
+    function() {
+        const lsNotes = JSON.parse(localStorage.getItem("notes"));
+        if (lsNotes === null) {
+            addNote()
+        } else {
+            lsNotes.forEach(
+                (lsNote) => {
+                    addNote(lsNote)
+                }
+            )
+        }
+
+    }
+)()
+
+            </script>
+           
+            
+         
+            
+
+</html>
